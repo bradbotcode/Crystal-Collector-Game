@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-10">
+                <div class="card">
+                    <h1 class="card-header">Fruit Collector Game</h1>
+                    <div class="card-body">
+                        <h3 class="card-title">Game Insructions</h3>
+                        <p class="card-text">These are the insructions of the game:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-link btn1" value="oldVal">
+                    <img id="imgBtn1" src="assets/images/grapes.png" width="110px">
+                </button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-link btn2" value="oldVal">
+                    <img src="assets/images/watermelon.png" width="110px">
+                </button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-link btn3" value="oldVal">
+                    <img src="assets/images/pineapple.png" width="110px">
+                </button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-link btn4" value="oldVal">
+                    <img src="assets/images/strawberry.png" width="110px">
+                </button>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <h5>Points</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text showPoints"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <h5>Random Number</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text showRN"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <h5>Scoreboard</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text showScore"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/game.js"></script>
+
+</body>
+
+</html>
