@@ -1,0 +1,21 @@
+.col,
+.col-2,
+.col-4,
+.col-10 {
+  text-align: center;
+  margin: auto;
+}
+.card,
+.btn,
+.container {
+  margin: auto;
+}
+
+.showRN {
+  font-size: 70px;
+}
+
+.showScore,
+.showPoints {
+  font-size: 20px;
+}
