@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Document</title>
@@ -17,55 +17,63 @@
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col">
-            </div>
-            <div class="col-10">
-                <div class="card">
-                    <h1 class="card-header">Fruit Collector Game</h1>
+        <div class="gameTitle">
+            <h1>Fruit Collector Game</h1>
+        </div>
+        <div id="accordion">
+            <div class="card text-center rules">
+                <div class="card-header rules" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Click for Game Instructions!
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                        <h3 class="card-title">Game Insructions</h3>
-                        <p class="card-text">These are the insructions of the game:</p>
+                        <ul>
+                            <li> The game begins by displaying a random number in the green box below.</li>
+                            <li>Each fruit has a mystery value set to it between 1 and 12. You can only determine the value of
+                                the fruit by clicking it.
+                            </li>
+                            <li>When a fruit is clicked, it will add that fruit's value to the points box below.</li>
+                            <li>To win, your total points must perfectly match the random number. If you go over, you lose.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col">
-            </div>
         </div>
-        <br />
-        <br />
-
         <div class="row">
             <div class="col">
             </div>
             <div class="col-2">
-                <button type="button" class="btn btn-link btn1" value="oldVal">
-                    <img id="imgBtn1" src="assets/images/grapes.png" width="110px">
+                <button type="button" class="btn btn-link btn1">
+                    <img src="assets/images/grapes.png" width="120px">
                 </button>
             </div>
             <div class="col-2">
-                <button type="button" class="btn btn-link btn2" value="oldVal">
-                    <img src="assets/images/watermelon.png" width="110px">
+                <button type="button" class="btn btn-link btn2">
+                    <img src="assets/images/watermelon.png" width="120px">
                 </button>
             </div>
             <div class="col-2">
-                <button type="button" class="btn btn-link btn3" value="oldVal">
-                    <img src="assets/images/pineapple.png" width="110px">
+                <button type="button" class="btn btn-link btn3">
+                    <img src="assets/images/pineapple.png" width="120px">
                 </button>
             </div>
             <div class="col-2">
-                <button type="button" class="btn btn-link btn4" value="oldVal">
-                    <img src="assets/images/strawberry.png" width="110px">
+                <button type="button" class="btn btn-link btn4">
+                    <img src="assets/images/strawberry.png" width="120px">
                 </button>
             </div>
             <div class="col">
             </div>
         </div>
-        <br />
-        <br />
+        <hr>
         <div class="row">
             <div class="col-4">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                     <div class="card-header">
                         <h5>Points</h5>
                     </div>
@@ -80,12 +88,12 @@
                         <h5>Random Number</h5>
                     </div>
                     <div class="card-body">
-                        <p class="card-text showRN"></p>
+                        <div class="card-text showRN"></div>
                     </div>
                 </div>
             </div>
             <div class="col-4">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
                     <div class="card-header">
                         <h5>Scoreboard</h5>
                     </div>
@@ -95,9 +103,14 @@
                 </div>
             </div>
         </div>
+        <br />
+        <br />
     </div>
 
     <script type="text/javascript" src="assets/game.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 

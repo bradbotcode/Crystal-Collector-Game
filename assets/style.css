@@ -1,3 +1,13 @@
+.rules {
+  border-color: white;
+  background-color: white;
+}
+
+.gameTitle {
+  text-align: center;
+  padding-top: 50px;
+}
+
 .col,
 .col-2,
 .col-4,
@@ -6,9 +16,23 @@
   margin: auto;
 }
 .card,
-.btn,
-.container {
+.btn {
   margin: auto;
+}
+
+.row {
+  margin: 70px;
+}
+
+p,
+h3,
+li {
+  text-align: left;
+}
+
+h1 {
+  font-size: 75px;
+  margin-bottom: 30px;
 }
 
 .showRN {
@@ -17,5 +41,5 @@
 
 .showScore,
 .showPoints {
-  font-size: 20px;
+  font-size: 30px;
 }

@@ -1,72 +1,62 @@
 //Generates random number between 19 & 120.
-
 var randNum = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 Math.floor(Math.random() * 119 + 2);
-//Testing
-console.log(randNum);
 //Print randNum to showRN card.
 $(".showRN").html(randNum);
 
-//Generates random number between 1 & 12 for fruits.
+//Generates a random number between 1 & 12 for each button.
 var fruitNum1 = Math.floor(Math.random() * 11 + 1);
 var fruitNum2 = Math.floor(Math.random() * 11 + 1);
 var fruitNum3 = Math.floor(Math.random() * 11 + 1);
 var fruitNum4 = Math.floor(Math.random() * 11 + 1);
 
-//Testing
-console.log("Fruit num 1 is: " + fruitNum1);
-console.log("Fruit num 2 is: " + fruitNum2);
-console.log("Fruit num 3 is: " + fruitNum3);
-console.log("Fruit num 4 is: " + fruitNum4);
-
+//Global score variables.
 var wins = 0;
 var losses = 0;
 var points = 0;
-
 //Prints Wins and Losses variable in showScore card.
 $(".showScore").html(
   "<div>Wins: " + wins + "</div>" + "<div>Losses: " + losses + "</div>"
 );
+//Prints player's points to showPoints card.
 $(".showPoints").html(points);
 
-/*Reset function NOT WORKING
+//Function to reset the game after each round.
 function reset() {
-  var randNum = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+  randNum = Math.floor(Math.random() * (120 - 19 + 1) + 19);
   Math.floor(Math.random() * 119 + 2);
   $(".showRN").html(randNum);
 
-  var fruitNum1 = Math.floor(Math.random() * 11 + 1);
-  var fruitNum2 = Math.floor(Math.random() * 11 + 1);
-  var fruitNum3 = Math.floor(Math.random() * 11 + 1);
-  var fruitNum4 = Math.floor(Math.random() * 11 + 1);
+  fruitNum1 = Math.floor(Math.random() * 11 + 1);
+  fruitNum2 = Math.floor(Math.random() * 11 + 1);
+  fruitNum3 = Math.floor(Math.random() * 11 + 1);
+  fruitNum4 = Math.floor(Math.random() * 11 + 1);
 
-  var points = 0;
+  points = 0;
   $(".showPoints").html(points);
+}
 
-  //Prints Wins and Losses variable in showScore card.
-  $(".showScore").html(
-    "<div>Wins: " + wins + "</div>" + "<div>Losses: " + losses + "</div>"
-  );
-}*/
-
-//Win or Lose function NOT WORKING
+//Function that dictates if the player has won or lost.
+//This function also calls the reset function to restart the game after a win or a loss.
 function winLose() {
   if (points === randNum) {
     wins++;
     $(".showScore").html(
       "<div>Wins: " + wins + "</div>" + "<div>Losses: " + losses + "</div>"
     );
+    reset();
   } else if (points > randNum) {
     losses++;
     $(".showScore").html(
       "<div>Wins: " + wins + "</div>" + "<div>Losses: " + losses + "</div>"
     );
+    reset();
   }
 }
 
 //Click events for each button.
-//For each button, the click add's the respective fruitNumx variable to the total points and makes it that.
-
+//Depending on which button is clicked, that button's assigned fruitNum will add to the total points.
+//Each click checks to see if the game has been won or lost.
 $(".btn1").click(function() {
   points = fruitNum1 + points;
   $(".showPoints").html(points);
