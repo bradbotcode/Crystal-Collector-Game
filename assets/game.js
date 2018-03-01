@@ -13,7 +13,7 @@ var fruitNum4 = Math.floor(Math.random() * 11 + 1);
 var wins = 0;
 var losses = 0;
 var points = 0;
-//Prints Wins and Losses variable in showScore card.
+//Prints wins and losses variable in showScore card.
 $(".showScore").html(
   "<div>Wins: " + wins + "</div>" + "<div>Losses: " + losses + "</div>"
 );
