@@ -36,7 +36,7 @@ function reset() {
 }
 
 //Function that dictates if the player has won or lost.
-//This function also calls the reset function to restart the game after a win or a loss.
+//This function also calls the reset function to restart the game after a win or loss.
 function winLose() {
   if (points === randNum) {
     wins++;
